@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+nav {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+}
+nav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+#Founded{
+    background-color: #a09898;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    
+}
+#output{
+    padding: 20px;
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    border: solid;
+}
+
+#meny{
+    text-align: center;
+}
+#outPut{
+    margin-top: 30px;
+
+}

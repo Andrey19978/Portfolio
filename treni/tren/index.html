@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fon.css">
+</head>
+<body>
+    <div>
+      <button id="showModalButton">Показать модальное окно</button>
+      <div id="modal" style="display: none;">
+          <div>
+              <span id="closeModalButton" style="cursor: pointer;">&times;</span>
+              <button id="registerButton">Зарегистрироваться</button>
+              <div id="overlay"></div>
+              <div id="registrationForm">
+                  <span id="closeButton" style="cursor: pointer; float: right;">&times;</span>
+                  <input type="text" placeholder="Имя" required>
+                  <input type="email" placeholder="Email" required>
+                  <input type="password" placeholder="Пароль" required>
+                  <button type="submit">Отправить</button>
+              </div>
+          </div>
+      </div>
+    </div>
+    <script src="script-updated.js"></script>
+</body>
+</html>
