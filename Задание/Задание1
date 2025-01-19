@@ -1,0 +1,85 @@
+Задание 1:
+1 взвешивание по 3 монеты и 1 взвешивание по 1 монеты.
+Задание 2:
+нельзя
+Задание 3:
+разделяем на пополам, всбрасываем и узнаем в каком диапазоне прочность придмета. потребуется 13 попыток. 
+Задание 4:
+60 пирожков
+Задание 5:
+function comp(n) {
+    if (n % 10 === 1 && n % 100 !== 11) {
+      return `${n} компьютер`;
+    } else if (n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20)) {
+      return `${n} компьютера`;
+    } else {
+      return `${n} компьютеров`;
+    }
+  }
+  console.log(comp(25));
+Задание 6:
+function commonDivisor(arr) {
+    function gcd(a, b) {
+      if (b === 0) return a;
+      return gcd(b, a % b);
+    }
+  
+    let result = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+      result = gcd(result, arr[i]);
+    }
+  
+    let p = [];
+    for (let i = 1; i <= result; i++) {
+      if (result % i === 0) {
+        p.push(i);
+      }
+    }
+  
+    return p;
+  }
+  console.log(commonDivisor([42, 12, 18]));
+Задание 7:
+function primeNumbers(min, max) {
+    let prime = [];
+    for (let i = min; i <= max; i++) {
+      if (i > 1) {
+        let isPrime = true;
+        for (let j = 2; j <= Math.sqrt(i); j++) {
+          if (i % j === 0) {
+            isPrime = false;
+            break;
+          }
+        }
+        if (isPrime) {
+          prime.push(i);
+        }
+      }
+    }
+    return prime;
+  }
+  
+  console.log(primeNumbers(11, 20));
+Задание 8:
+function printMultiplicationTable(n) {
+    let header = "  |";
+    for (let i = 1; i <= n; i++) {
+        header += `${i.toString().padStart(4, ' ')}`;
+    }
+    console.log(header);
+
+
+    console.log("-".repeat(5 * n + 3));
+
+
+    for (let i = 1; i <= n; i++) {
+        let row = `${i.toString().padStart(2, ' ')} |`;
+        for (let j = 1; j <= n; j++) {
+            row += `${(i * j).toString().padStart(4, ' ')}`;
+        }
+        console.log(row);
+    }
+}
+
+
+printMultiplicationTable(5);
