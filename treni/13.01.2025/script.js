@@ -1,23 +1,43 @@
-// Создаем объект group
-let group = {
-  // Свойство title
-  title: "Our Group",
-  
-  // Свойство students - массив строк
-  students: ["John", "Pete", "Alice"],
-  
-  // Метод showList
-  showList() {
-    // Используем метод forEach для массива students
-    this.students.forEach(
-      // Функция для каждого элемента в массиве
-      student => {
-        // Выводим сообщение с названием группы и именем студента
-        alert(this.title + ': ' + student)
-      }
-    );
-  }
-};
+// Получаем элементы
+const registerBtn = document.getElementById('registerBtn');
+const modal = document.getElementById('modal');
+const closeBtn = document.getElementsByClassName('close')[0];
+const registrationForm = document.getElementById('registrationForm');
 
-// Вызываем метод showList
-group.showList();
+// Открытие модального окна
+registerBtn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// Закрытие модального окна
+closeBtn.onclick = function() {
+    modal.style.display = "none";
+}
+
+// Закрытие модального окна при клике вне его
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+// Обработка формы регистрации
+registrationForm.onsubmit = function(event) {
+    event.preventDefault(); // Предотвращаем отправку формы
+    try {
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        if (!username || !password) {
+            throw new Error("Поле пустое, введи данные");
+        }
+
+        // Здесь можно добавить логику для регистрации пользователя
+        alert("Регистрация успешна!");
+
+        // Закрытие модального окна после успешной регистрации
+        modal.style.display = "none";
+    } catch (error) {
+        alert(error.message);
+    }
+}

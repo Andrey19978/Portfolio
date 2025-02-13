@@ -3,11 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ресурсы и Продукты</title>
     <link rel="stylesheet" href="fon.css">
 </head>
 <body>
+    <div><h1>Привет!</h1></div>
+    <div id="org_div1">Текст выше сгенерирован автоматически.</div>
     
+    <!-- Кнопка для открытия модального окна -->
+    <button id="registerBtn">Регистрация</button>
+
+    <!-- Модальное окно -->
+    <div id="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Регистрация</h2>
+            <form id="registrationForm">
+                <label for="username">Логин:</label>
+                <input type="text" id="username" name="username" required>
+                <br>
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+                <br>
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
 </body>
 <script src="script.js"></script>
 </html>
