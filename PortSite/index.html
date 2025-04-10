@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Portfolio/PortSite/ToDoList/simple-todo-list.css">
+    <link rel="stylesheet" href="fon/fon.css">
+    <link rel="stylesheet" href="/Portfolio/PortSite/Calculator/Calc_fon.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="header__nav">
+                <ul class="heder__list">
+                    <li><a class="activ" href="#!">О себе</a></li>
+                    <li><a href="#!">Портфолио</a></li>
+                    <li><a href="#!">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="parent">
+            <div class="div1">
+                <h1> Привет, меня зовут Андрей,<br>
+                    я веб разработчки</h1>
+                <br>
+                <h3> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat
+                    duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</h3>
+                <br>
+                <button>Download Resume</button>
+            </div>
+            <div class="div2">img</div>
+        </div>
+    </header>
+    <main>
+        <div>
+            <div class="parent2">
+                <div class="div12">
+                        <ul>
+                            <li>
+                                <section class="skills">
+                                    <h2>Мой стек технологий</h2>
+                                    <div class="skills-grid">
+                                      <div class="skill">
+                                        <i class="fab fa-html5"></i>
+                                        <span>HTML5</span>
+                                      </div>
+                                      <div class="skill">
+                                        <i class="fab fa-css3-alt"></i>
+                                        <span>CSS3</span>
+                                      </div>
+                                      <div class="skill">
+                                        <i class="fab fa-js"></i>
+                                        <span>JavaScript</span>
+                                      </div>
+                                      <div class="skill">
+                                        <i class="fab fa-react"></i>
+                                        <span>Vue</span>
+                                      </div>
+                                      <div class="skill">
+                                        <i class="fab fa-react"></i>
+                                        <span>NPM</span>
+                                      </div>
+                                      <div class="skill">
+                                        <i class="fab fa-react"></i>
+                                        <span>Git</span>
+                                      </div>
+                                      <div class="skill">
+                                        <i class="fab fa-react"></i>
+                                        <span>GitHub</span>
+                                      </div>
+                                      <div class="skill">
+                                        <i class="fab fa-react"></i>
+                                        <span>WebPack</span>
+                                      </div>
+                                    </div>
+                                  </section>
+                            </li>
+                            <li>
+                                
+                            </li>
+                        </ul>
+                </div>
+                <div class="div22">
+                    <img src="/Portfolio/PortSite/image/photo_2025-04-06_20-32-09.jpg" alt="">
+                </div>
+                <div class="div32">
+                    <h2>Recent posts</h2>
+                </div>
+                <div class="div42"><a>View all</a></div>
+            </div>
+        </div>
+        <section class="portfolio">
+            <h2>Featured works</h2>
+            <article class="portfolio_projects">
+                <h1>Автофермер для Sunflower Land
+                    Chrome-расширение для автоматического сбора ресурсов (дерево, камень, золото) в NFT-игре. Экономит до 80% времени игрока.
+                    Технологии: JavaScript, Chrome Extensions API. <a class="text_a_projects" href="https://github.com/Andrey19978/DzGoryaev/tree/master/googleextension" target="_blank">GitHub.</a></h1>
+                    <img src="/Portfolio/PortSite/image/Sunflo_.png" alt="" class="photo_sunflo">
+                    <br>
+                    <em style="margin-left: 100px;">"Расширение создано для изучения автоматизации. Я не поддерживаю читерство и нарушение правил игр".</em>
+            </article>
+            <article class="portfolio_projects">
+                <h1>Этот проект — часть моего обучения. Я взял дизайн из Figma и в точности перенёс его в код. <a class="text_a_projects" href="https://www.figma.com/design/qcmKp98gPYVyHQRSvVUxrX/Templates--22.-More-on-d-e-n.info?node-id=1-19&t=6yCwa5sxElRk7zJs-0" target="_blank">Figma.</a></h1>
+                <a href="/Portfolio/PortSite/image/Spa.html.png" target="_blank">
+                    <img src="/Portfolio/PortSite/image/Spa.html.png" alt="" class="photo_Spa">
+                  </a>
+                  <h1>Технологии: HTML5, CSS3 (Flexbox/Grid), JavaScript. <a class="text_a_projects" href="https://www.figma.com/design/qcmKp98gPYVyHQRSvVUxrX/Templates--22.-More-on-d-e-n.info?node-id=1-19&t=6yCwa5sxElRk7zJs-0" target="_blank">Figma.</a></h1>
+            </article>
+            <article class="portfolio_projects">
+                <div id="calculator">
+                    <!-- Screen and clear key -->
+                    <div class="top">
+                        <span class="clear">C</span>
+                        <div class="screen"></div>
+                    </div>
+                    
+                    <div class="keys">
+                        <!-- operators and other keys -->
+                        <span>7</span>
+                        <span>8</span>
+                        <span>9</span>
+                        <span class="operator">+</span>
+                        <span>4</span>
+                        <span>5</span>
+                        <span>6</span>
+                        <span class="operator">-</span>
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span class="operator">÷</span>
+                        <span>0</span>
+                        <span>.</span>
+                        <span class="eval">=</span>
+                        <span class="operator">x</span>
+                    </div>
+                </div>
+            </article>
+            <article class="portfolio_projects">
+                <h1>fefe</h1>
+                <div class="container_TodoList">
+                    <h1>Лист задач</h1>
+                    <input type="text" id="taskInput" placeholder="Новая задача...">
+                    <button id="addTaskButton">Добавить задачу</button>
+                    <ul id="taskList"></ul>
+                </div>
+            </article>
+          </section>
+    </main>
+    <footer class="portfolio_footer">
+        <h2>Copyright ©2020 All rights reserved</h2>
+    </footer>
+
+</body>
+<script src="script/script.js"></script>
+<script src="/Portfolio/PortSite/Calculator/Calcu_script.js"></script>
+<script src="/Portfolio/PortSite/ToDoList/simple-todo-list.js"></script>
+</html>

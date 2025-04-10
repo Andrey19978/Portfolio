@@ -1,0 +1,53 @@
+
+.container_TodoList {
+    max-width: 600px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container_TodoList h1 {
+    text-align: center;
+}
+
+.container_TodoList input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.container_TodoList button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container_TodoList button:hover {
+    background-color: #218838;
+}
+
+.container_TodoList ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.container_TodoList li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container_TodoList li.completed {
+    text-decoration: line-through;
+    color: #888;
+}

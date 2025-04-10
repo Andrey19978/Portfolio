@@ -1,177 +1,165 @@
-/* 
-  * - универсальный селектор, который выбирает все элементы на странице.
-  В данном случае он пустой, поэтому не будет применять никаких стилей.
-*/
-* {
-    margin: 0;
+/* Add your styles here */
+
+/* Стили для навигационных квадратов карусели и горизонтальной карусели */
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 }
 
-img{
+.nav-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.nav-dot:hover {
+  background-color: #aaa;
+}
+
+.nav-dot.active {
+  background-color: #018ABE;
+}
+
+.ant-carousel-list {
+  display: flex;
+}
+
+.ant-carousel-element {
+  flex: 0 0 33.33%;
+  margin-right: 10px;
+}
+
+img {
   max-width: 100%;
 }
-/* 
-  body - селектор, который выбирает элемент body, который является корневым элементом HTML-документа.
-  background-color - свойство, которое устанавливает цвет фона элемента.
-  color - свойство, которое устанавливает цвет текста элемента.
-*/
-body{
-    background-color: #162831; /* Установить цвет фона в #162831 */
-    color: #ffff; /* Установить цвет текста в белый (#ffff) */
+
+body {
+  background-color: #162831;
+  color: #ffff;
 }
 
-/* 
-  a - селектор, который выбирает все элементы ссылок на странице.
-  color - свойство, которое устанавливает цвет текста элемента.
-  text-decoration - свойство, которое устанавливает стиль текста (в данном случае, удаление подчеркивания).
-*/
-a{
-    color: #ffff; /* Установить цвет текста в белый (#ffff) */
-    text-decoration: none; /* Удалить подчеркивание у ссылок */
+a {
+  color: #ffff;
+  text-decoration: none;
 }
 
-/* 
-  ul - селектор, который выбирает все элементы списков на странице.
-  list-style - свойство, которое устанавливает стиль маркеров списка.
-*/
-ul{
-    list-style: none; /* Удалить маркеры списка */
+ul {
+  list-style: none;
 }
 
-.container{
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 0 15px;
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
-/* 
-  .header - селектор, который выбирает элемент с классом "header".
-  display - свойство, которое устанавливает тип отображения элемента.
-  justify-content - свойство, которое устанавливает выравнивание содержимого элемента по горизонтали.
-  align-items - свойство, которое устанавливает выравнивание содержимого элемента по вертикали.
-*/
 .header {
-    padding: 25px;
-
+  padding: 25px;
 }
 
-.header .container{
-    display: flex; /* Установить тип отображения в flexbox */
-    justify-content: space-between; /* Выровнять содержимое по горизонтали, распределяя элементы по всей ширине */
-    align-items: center; /* Выровнять содержимое по вертикали, центрируя элементы */
-
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* 
-  .header__nav - селектор, который выбирает элемент с классом "header__nav".
-  В данном случае он пустой, поэтому не будет применять никаких стилей.
-*/
-.header__nav {
-
-}
-
-/* 
-  .heder__list - селектор, который выбирает элемент с классом "heder__list".
-  display - свойство, которое устанавливает тип отображения элемента.
-  gap - свойство, которое устанавливает расстояние между элементами.
-*/
 .heder__list {
-    display: flex; /* Установить тип отображения в flexbox */
-    gap: 30px; /* Установить расстояние между элементами в 30px */
+  display: flex;
+  gap: 30px;
 }
 
 .header__nav a {
-    font-size: 14px;
-    opacity: 0.7;
-    transition: opacity 0.3s;
+  font-size: 14px;
+  opacity: 0.7;
+  transition: opacity 0.3s;
 }
 
-.header__nav a.activ{
-    opacity: 1;
+.header__nav a:hover {
+  opacity: 2;
 }
 
-.header__nav a:hover{
-    opacity: 0.9;
-}
-/* 
-  .batt - селектор, который выбирает элемент с классом "batt".
-  В данном случае он пустой, поэтому не будет применять никаких стилей.
-*/
 .batt {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 155px;
-    height: 36px;
-
-    font-weight: 500;
-    font-size: 16px;
-
-    background: #018ABE;
-    border-radius: 3px;
-    transition: opacity 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 155px;
+  height: 36px;
+  font-weight: 500;
+  font-size: 16px;
+  background: #018ABE;
+  border-radius: 3px;
+  transition: opacity 0.3s;
 }
 
 .batt:hover {
-    opacity: 0.8;
-}
-#logov{
-    width: 50px;
-    height: 50px;
-}
-.main{
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-.welcome {
-    height: 600px;
-    background-image: url("/treni/MaySite/imag/unsplash_S-llxYh3GzI.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 10px;
-    background-position: center;
-    text-align: center;
+  opacity: 0.8;
 }
 
-.welcome__text{
-    padding: 180px;
+#logov {
+  width: 50px;
+  height: 50px;
+}
+
+.main {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.welcome {
+  height: 600px;
+  background-image: url("/Portfolio/treni/MaySite/imag/unsplash_S-llxYh3GzI.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  background-position: center;
+  text-align: center;
+}
+
+.welcome__text {
+  padding: 180px;
 }
 
 .welcome__subtext {
-    font-size: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .welcome__subtitle {
-    font-size: 64px;
+  font-size: 64px;
 }
 
-  .welcome__subtext-image-left {
-    margin-right: 40px;
-  }
-  
-  .welcome__subtext-image-right {
-    margin-left: 40px;
-  }
-  
-
-
-  .services {
-    height: 600px;
-    background-size: cover;
-    border-radius: 10px;
-    background-position: center;
-    text-align: center;
+.welcome__subtext-image-left {
+  margin-right: 40px;
 }
 
-.services__text{
+.welcome__subtext-image-right {
+  margin-left: 40px;
+}
+
+.services {
+  height: 940px;
+  width: 1140px;
+  background-size: cover;
+  border-radius: 10px;
+  background-position: center;
+  text-align: center;
+  margin-top: 75px;
+}
+
+.services__text {
   font-size: 42px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 50px;
 }
 
 .services__text-image-left {
@@ -182,7 +170,375 @@ ul{
   margin-left: 40px;
 }
 
-.services__card__card {
-  height: 600px;
-  background-image: url("treni/MaySite/imag/unsplash.png");
+.container1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  height: 700px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  background-position: center;
+  text-align: center;
 }
+
+.services__card__card {
+  grid-area: 1 / 1 / 3 / 2;
+  width: 360px;
+  border-radius: 10px;
+  background-image: url("/Portfolio/treni/MaySite/imag/unsplash.png");
+  display: flex;
+  text-align: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-size: cover;
+  transition: transform 0.3s ease;
+}
+
+.services__card__card:hover {
+  transform: translateY(-10px);
+}
+
+.services__card__card2 {
+  grid-area: 1 / 2 / 2 / 3;
+  width: 360px;
+  height: 350px;
+  border-radius: 10px;
+  background-image: url("/Portfolio/treni/MaySite/imag/unsplash.png");
+  display: flex;
+  background-position: center;
+  text-align: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-size: cover;
+  transition: transform 0.3s ease;
+}
+
+.services__card__card2:hover {
+  transform: translateY(-10px);
+}
+
+.services__card__card3 {
+  grid-area: 1 / 3 / 2 / 4;
+  width: 360px;
+  height: 350px;
+  border-radius: 10px;
+  background-image: url("/Portfolio/treni/MaySite/imag/unsplash.png");
+  display: flex;
+  background-position: center;
+  text-align: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-size: cover;
+  transition: transform 0.3s ease;
+}
+
+.services__card__card3:hover {
+  transform: translateY(-10px);
+}
+
+.services__card__card4 {
+  grid-area: 2 / 2 / 3 / 3;
+  width: 360px;
+  height: 350px;
+  border-radius: 10px;
+  background-image: url("/Portfolio/treni/MaySite/imag/unsplash.png");
+  display: flex;
+  background-position: center;
+  text-align: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-size: cover;
+  transition: transform 0.3s ease;
+}
+
+.services__card__card4:hover {
+  transform: translateY(-10px);
+}
+
+.services__card__card5 {
+  grid-area: 2 / 3 / 3 / 4;
+  width: 360px;
+  height: 350px;
+  border-radius: 10px;
+  background-image: url("/Portfolio/treni/MaySite/imag/unsplash.png");
+  display: flex;
+  background-position: center;
+  text-align: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-size: cover;
+  transition: transform 0.3s ease;
+}
+
+.services__card__card5:hover {
+  transform: translateY(-10px);
+}
+
+.container1 h4 {
+  margin-left: 33px;
+  font-size: 24px;
+  line-height: 33.6px;
+  text-align: left;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 33px;
+}
+
+.reviews {
+  height: 450px;
+  width: 1140px;
+  background-size: cover;
+  border-radius: 10px;
+  background-position: center;
+  text-align: center;
+  margin-top: 75px;
+}
+
+.reviews__text {
+  font-size: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.about {
+  width: 1076;
+  height: 1024;
+  background-size: cover;
+  border-radius: 10px;
+  background-position: center;
+  margin-top: 75px;
+}
+
+.about__text {
+  font-size: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.about__parent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 700px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  background-position: center;
+}
+
+.group1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.group2 {
+  grid-area: 1 / 2 / 2 / 3;
+  border-radius: 10px;
+  background-image: url("/Portfolio/treni/MaySite/imag/Rectangle\ 24.png");
+  display: flex;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-size: cover;
+  transition: transform 0.3s ease;
+}
+
+.group3 {
+  grid-area: 2 / 1 / 3 / 2;
+  border-radius: 10px;
+  background-image: url("/Portfolio/treni/MaySite/imag/Rectangle\ 24.png");
+  display: flex;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-size: cover;
+  transition: transform 0.3s ease;
+}
+
+.group4 {
+  grid-area: 2 / 2 / 3 / 3;
+  margin-left: 20px;
+}
+
+.group1 h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33.6px;
+}
+
+.group1 h4 {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22.4px;
+}
+
+.group4 h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33.6px;
+}
+
+.group4 h4 {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22.4px;
+}
+
+.group2 img {
+  transition: all 0.6s ease;
+}
+
+.group2:hover {
+  background: url("/Portfolio/treni/MaySite/imag/c7d00ff9431edc392775cf8e08c2f80f.png") no-repeat center;
+  background-size: cover;
+}
+
+.group3 img {
+  transition: all 0.6s ease;
+}
+
+.group3:hover {
+  background: url("/Portfolio/treni/MaySite/imag/442a5bbaeacc490d0d6a6466f9a3c302.png") no-repeat;
+  background-size: cover;
+}
+
+.price {
+  width: 1076;
+  height: 1024;
+  background-size: cover;
+  border-radius: 10px;
+  background-position: center;
+  margin-top: 75px;
+}
+
+.price__text {
+  font-size: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.price__goods {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 526;
+  height: 455;
+}
+
+.price__price {
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.price__number {
+  font-family: El Messiri;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  margin-bottom:30px;
+}
+
+.price__price__list{
+  margin-top: 80px;
+}
+
+.price_services__text-image-left{
+  float:left
+}
+
+.price_services__text-image-left {
+  margin-right: 20px; /* Add margin to the right for spacing */
+  display: inline-block; /* Ensure the image is inline with the text */
+}
+
+.price__certificate {
+  width: 526px;
+  height: 396px;
+  border-radius: 10px;
+  background-image: url("/Portfolio/treni/MaySite/imag/46123091d92874e5bcb5d0587b84b191.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-size: cover;
+  transition: transform 0.3s ease;
+  margin-left: 50px;
+}
+
+.price__certificate img {
+  transition: all 0.6s ease;
+}
+
+.price__certificate:hover {
+  background: url("/Portfolio/treni/MaySite/imag/price111.png") no-repeat;
+  background-size: cover;
+}
+
+.price__text__certificate{
+  text-align: center;
+}
+
+.map__map{
+height: 604px;
+margin-left: 10px;
+margin-top: 50px;
+}
+
+#map {
+  height: 604px;
+  width: 856px;
+  border-radius: 10px;
+}
+
+.foot__nav{
+  height: 604px;
+  width: 856px;
+}
+
+.foot__nav_nav{
+  width: 392px;
+  height: 290px;
+  background-color: #018ABE;
+}
+
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+  
+.foot__nav_nav1 {
+  grid-row: span 1 / span 2;
+  width: 392px;
+  height: 290px;
+  background-color: #018ABE;
+  margin-left: 10px;
+  margin-top: 50px;
+  border-radius: 10px;
+}
+
+
+.foot__nav_nav2 {
+  grid-column-start: 2;
+  grid-row-start: 2;
+  width: 392px;
+  height: 290px;
+  background-color: #018ABE;
+  margin-left: 10px;
+  margin-top: -300px;
+  border-radius: 10px;
+}
+      
